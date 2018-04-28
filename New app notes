@@ -1,0 +1,17 @@
+Steps to create new Angular2/Node app:
+
+Follow along with Angular's quickstart guide: https://angular.io/guide/quickstart
+
+To launch: ng serve --open (from the project's directory)
+
+To add a component: ng generate component componentName
+
+To edit a component: edit the .ts file to write JS/Angular, edit the html file to affect change
+
+To link to a new page: Import the component to in app-routing.module.ts
+Add the path and component reference to the routes array
+
+Any HTML in app.component.html is meant to be constant for every page
+<router-element></router-element> is where a routed page will display
+
+index.html is where I define metadata for the entire application
