@@ -1,31 +1,39 @@
 <div class="container-fluid">
-  <div>
-    <table>
-      <tr>
-        <td colspan="3"><input type="text" value="{{expr}}" (keyup)="changeExpression($event)"></td>
-      </tr>
-      <tr>
+ <div class="row">
+ 	<div class="col-sm-10 text-center">
+		<table style="margin: auto;">
+			<tr>
+				<td colspan="3"><input type="text" class="form-control" value="{{expr}}" (keyup)="changeExpression($event)"></td>
+			</tr>
+			<tr>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(7)">7</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(8)">8</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(9)">9</button></td>
-      </tr>
-      <tr>
+			</tr>
+			<tr>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(4)">4</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(5)">5</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(6)">6</button></td>
-      </tr>
-      <tr>
+			</tr>
+			<tr>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(1)">1</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(2)">2</button></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(3)">3</button></td>
-      </tr>
-      <tr>
-        <td></td>
+			</tr>
+			<tr>
+				<td></td>
 				<td><button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(0)">0</button></td>
-        <td></td>
-      </tr>
-    </table>
-    <input type="submit" id="submit" (click)="evaluateExpression()">
-    <p id="output">{{answer}}</p>
-  </div>
+				<td></td>
+			</tr>
+		</table>
+		<input class="btn btn-block btn-raised btn-secondary" type="submit" id="submit" (click)="evaluateExpression()">
+		<p class="text-primary" id="output">{{answer}}</p>
+ 	</div>
+ 	<div class="col-sm-2">
+		<button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(4)">+</button>
+		<button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(4)">-</button>
+		<button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(4)">X</button>
+		<button class="btn btn-block btn-raised btn-primary" (click)="addToExpression(4)">/</button>
+ 	</div>
+ </div>
 </div>
